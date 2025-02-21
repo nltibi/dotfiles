@@ -4,3 +4,4 @@
 --ignore=.gitignore
 --ignore=DS_Store
 --ignore=README.md
+--ignore=LICENSE
