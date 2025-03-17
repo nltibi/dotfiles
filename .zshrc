@@ -54,3 +54,26 @@ if which -p fzf >/dev/null; then
   source <(fzf --zsh)
 fi
 
+#
+# ZSH OPTIONS
+# ---------------------------------
+setopt autocd              # automatically cd into a directory if only dir name given
+setopt interactivecomments # allow comments in interactive mode
+setopt magicequalsubst     # allow filename completion in arguemnt of the form `argname=file`
+setopt notify              # automatically report background job status
+setopt numericglobsort     # sort expanded file names numerically
+setopt nobeep              # do not beep on errors
+
+#
+# HISTORY OPTIONS
+# ---------------------------------
+HISTSIZE=20000
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
