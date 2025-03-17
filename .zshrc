@@ -48,3 +48,9 @@ if which -p eza >/dev/null; then
    alias ll="eza -l --icons=auto --git"
    alias l="ll"
 fi
+
+# fzf -- history and fuzzy glob search
+if which -p fzf >/dev/null; then
+  source <(fzf --zsh)
+fi
+

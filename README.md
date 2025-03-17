@@ -20,11 +20,12 @@ default.
 * the following packages are installed:
   * GNU `stow` -- for setting up symlinks to these config files.
   * `staship` -- for rendering shell prompts
+  * [fzf](https://github.com/junegunn/fzf) -- fuzzy finder, used for zsh and NeoVim
 
     On macOS, these packages can be installed directly from HomeBrew:
 
     ```shell
-    brew install ghostty stow starship
+    brew install ghostty stow starship fzf
     ```
 
     On Linux, use your distribution's package manager to install these tools.
