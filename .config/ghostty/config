@@ -9,6 +9,5 @@ macos-titlebar-proxy-icon = hidden
 keybind = global:ctrl+§=toggle_quick_terminal
 window-step-resize = true
 alpha-blending = linear-corrected
-copy-on-select = clipboard
 
 config-file = ?config-local
