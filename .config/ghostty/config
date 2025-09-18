@@ -1,13 +1,21 @@
-theme = catppuccin-mocha
+theme = Catppuccin Mocha
 window-theme = dark
 background-opacity = 0.85
 background-blur-radius = 20
+# window-step-resize = true
+alpha-blending = linear-corrected
 macos-icon = glass
 macos-titlebar-style = tabs
 macos-titlebar-proxy-icon = hidden
 
-keybind = global:ctrl+§=toggle_quick_terminal
-window-step-resize = true
-alpha-blending = linear-corrected
+quick-terminal-position = top
+quick-terminal-size = 80%,1728px
+quick-terminal-space-behavior = remain
+quick-terminal-screen = macos-menu-bar
+
+keybind = global:cmd+§=toggle_quick_terminal
+keybind = global:alt+`=toggle_quick_terminal
+
+auto-update = check
 
 config-file = ?config-local
