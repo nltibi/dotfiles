@@ -49,6 +49,24 @@ return {
           hide_by_name = { ".git" },
         },
       },
+      default_component_configs = {
+        modified = {
+          symbol = " ",
+        },
+        git_status = {
+          symbols = {
+            added = " ",
+            deleted = " ",
+            renamed = " ",
+            modified = " ",
+            staged = " ",
+            unstaged = "",
+            ignored = " ",
+            untracked = " ",
+            conflict = "󰳤 ",
+          },
+        },
+      },
     },
   },
 }
