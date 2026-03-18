@@ -78,14 +78,14 @@ truncation_length = 30
 
 [git_status]
 format = '($all_status$ahead_behind )'
-deleted = " "
-renamed = " "
-modified = " "
-staged = " "
-untracked = " "
-conflicted = "󰳤 "
-ahead = "󰜹 "
-behind = "󰜰 "
+deleted = " "
+renamed = " "
+modified = "󰙏 "
+staged = "󰦒 "
+untracked = " "
+conflicted = ""
+ahead = ""
+behind = ""
 stashed = ""
 
 [golang]
