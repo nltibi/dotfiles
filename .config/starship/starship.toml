@@ -74,18 +74,19 @@ format = '[ $symbol ($version) ]($style)'
 [git_branch]
 symbol = ""
 format = ' $symbol $branch '
-truncation_length = 30
+truncation_length = 35
 
 [git_status]
-format = '($all_status$ahead_behind )'
-deleted = " "
-renamed = " "
-modified = "󰙏 "
-staged = "󰦒 "
-untracked = " "
-conflicted = ""
-ahead = ""
-behind = ""
+format = '($all_status( $ahead_behind) )'
+deleted = " "
+renamed = " "
+modified = " "
+staged = " "
+untracked = " "
+conflicted = " "
+ahead = "$count"
+behind = "$count"
+diverged = "ahead_count $behind_count"
 stashed = ""
 
 [golang]
