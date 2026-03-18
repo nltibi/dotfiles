@@ -1,18 +1,12 @@
-format = """
-[](surface2)\
-$os\
-$username\
-[](bg:rosewater fg:surface2)\
+format = """$username\
 $directory\
-[](fg:rosewater bg:peach)\
-[$git_branch\
-$git_status](fg:base bg:peach)\
-[](fg:peach bg:red)\
-[$character](bg:red fg:base)\
-[ ](fg:red)\
+([](fg:prev_bg bg:surface1)[$git_branch\
+$git_status](fg:text bg:surface1))\
+([](fg:prev_bg bg:green)[$character](bg:green fg:base))\
+[](fg:prev_bg) \
 """
 
-right_format = """[](fg:surface0)$time[](fg:surface0)"""
+right_format = """[](fg:surface0)$time"""
 
 # Prompt to display when the command stretches multiple lines
 continuation_prompt = '▶▶ '
@@ -24,23 +18,25 @@ palette = "catppuccin_mocha"
 # You can also replace your username with a neat symbol like   or disable this
 # and use the os module below
 [username]
-show_always = true
 style_user = "bg:surface2 fg:text"
 style_root = "bg:overlay0 fg:text"
-format = '[$user ]($style)'
+format = '[$user ]($style)[](bg:peach fg:surface2)'
 disabled = false
 
 # An alternative to the username module which displays a symbol that
 # represents the current operating system
 [os]
-style = "bg:#9A348E"
 disabled = true # Disabled by default
 
 [directory]
-style = "bg:rosewater fg:base"
+style = "bg:peach fg:base"
 format = "[ $path ]($style)"
-truncation_length = 3
+truncation_length = 4
 truncation_symbol = "…/"
+truncate_to_repo = true
+repo_root_format = "[ [$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) ]($style)"
+repo_root_style = "bg:peach fg:base bold"
+home_symbol = ""
 
 # Here is how you can shorten some long paths by text replacement
 # similar to mapped_locations in Oh My Posh:
@@ -76,11 +72,21 @@ style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [git_branch]
-symbol = ""
+symbol = ""
 format = ' $symbol $branch '
+truncation_length = 30
 
 [git_status]
-format = '$all_status$ahead_behind '
+format = '($all_status$ahead_behind )'
+deleted = " "
+renamed = " "
+modified = " "
+staged = " "
+untracked = " "
+conflicted = "󰳤 "
+ahead = "󰜹 "
+behind = "󰜰 "
+stashed = ""
 
 [golang]
 symbol = " "

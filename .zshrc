@@ -15,6 +15,11 @@ zinit wait lucid light-mode for \
   blockf atpull'zinit creinstall -q .' \
       zsh-users/zsh-completions
 
+# SHELL PROMPT
+# -------------------------------------
+# Do not add one char gap between the right prompt and the right edge of the terminal
+ZLE_RPROMPT_INDENT=0
+# Use starship to configure prompt
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
