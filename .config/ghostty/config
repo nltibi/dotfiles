@@ -1,9 +1,10 @@
 theme = Catppuccin Mocha
 window-theme = dark
-background-opacity = 0.90
-background-blur-radius = 50
 font-size = 14
+background-opacity = 0.85
+# background-blur-radius = 50
 # window-step-resize = true
+background-blur = macos-glass-regular
 alpha-blending = linear-corrected
 macos-icon = glass
 macos-titlebar-style = tabs
