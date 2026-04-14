@@ -63,3 +63,14 @@ stow .
 
 This should symlink all config files to their proper locations. If stow throws
 errors, you might need to remove the existing files.
+
+## Updating
+
+It is recommended to update the above dependencies before updating the
+configuration files. Once the dependencies have been updated, execute:
+
+```shell
+cd dotfiles
+git pull
+stow .
+```
