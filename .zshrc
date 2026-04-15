@@ -83,6 +83,7 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# PATHS
+# ENV VARS
 # ---------------------------------
 export PATH=~/.local/bin:$PATH
+export XDG_CONFIG_HOME="$HOME/.config"
