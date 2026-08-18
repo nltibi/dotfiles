@@ -87,3 +87,9 @@ setopt hist_find_no_dups
 # ---------------------------------
 export PATH=~/.local/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# SOURCE LOCAL ZSH CONFIG
+# --------------------------------
+if test -f ~/.zshrc-local; then
+  source ~/.zshrc-local
+fi

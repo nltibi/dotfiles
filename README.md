@@ -74,3 +74,25 @@ cd dotfiles
 git pull
 stow .
 ```
+
+## Local overrides
+
+Some settings only make sense on a single machine (work-specific tools,
+private paths, per-host tweaks) and should not be committed to this repo.
+Where a tool supports it, these configs load an optional local file that is
+not tracked here, so you can extend or override the defaults without
+modifying the files managed by `stow`. More tools will be covered in this
+section as support for them is added.
+
+### zsh
+
+If `~/.zshrc-local` exists, it is sourced automatically at the very end of
+`.zshrc`. Because it loads last, anything you define there wins over the
+defaults -- aliases, exported variables, additional `PATH` entries, and so
+on. The file is entirely optional: if it is missing, it is simply skipped.
+
+```shell
+# ~/.zshrc-local
+export PATH="$HOME/work/bin:$PATH"
+alias gs='git status --short'
+```

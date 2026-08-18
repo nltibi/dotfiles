@@ -103,6 +103,10 @@ return {
     },
   },
   {
+    "esmuellert/vscode-diff.nvim",
+    dependencies = { "MunifTanjim/nui.nvim" },
+  },
+  {
     "chrisgrieser/nvim-spider",
     keys = {
       { "<A-w>", "<cmd>lua require('spider').motion('w')<CR>", mode = { "n", "o", "x" } },
